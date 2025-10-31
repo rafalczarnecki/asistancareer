@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = {"http://localhost:5173", "https://*.vercel.app"})
+@CrossOrigin(origins = {"http://localhost:5173", "https://asistancareer.vercel.app"})
 public class TestController {
 
     @GetMapping("/hello")
