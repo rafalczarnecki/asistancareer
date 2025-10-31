@@ -33,7 +33,9 @@ function App () {
     const [error, setError] = useState(null)
 
     useEffect (() => {
-        fetch('http://localhost:8080/api/questions')
+       const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+
+       fetch (`${API_URL}/api/questions`)
         .then(response => response.json())
         .then(data => {
             setQuestions(data)
